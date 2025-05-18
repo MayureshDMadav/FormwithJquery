@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <div id="formWrapper">
+      <h1>Admission Form</h1>
+      <p id="message">Form Submitted Succesfully</p>
+      <form id="form">
+        <div>
+          <label for="email">Email</label>
+          <input required type="text" name="email" id="email" />
+          <span class="error" id="emailerr"></span>
+        </div>
+        <div>
+          <label for="phone">Phone Number</label>
+          <input required type="number" name="phone" id="phone" />
+          <span class="error" id="phoneerr"></span>
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <span id="password-field">
+            <input required style="width: 100%;" type="password" name="password" id="password" />
+            <button id="show" type="button">show</button>
+          </span>
+          <span class="error" id="passworderr"></span>
+        </div>
+        <div>
+          <label for="confirmpass">Confirm Password</label>
+          <input required type="text" name="confirmpass" id="confirmpass" />
+          <span class="error" id="confirmpasserr"></span>
+        </div>
+        <div>
+          <input id="button" type="submit" />
+          <input type="reset" id="reset" hidden>
+        </div>
+      </form>
+    </div>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js"></script>
+  </body>
+</html>
