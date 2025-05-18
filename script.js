@@ -14,12 +14,11 @@ $("#show").click(function (event) {
 
 $("#button").click(function (event) {
   event.preventDefault();
-
+  errorFound = false;
   if (!validateEmail($("#email").val())) {
     addError("Please Enter a valid email !!", "emailerr");
     errorFound = true;
   } else {
-    errorFound = false;
     removeError("emailerr");
   }
 
@@ -27,7 +26,6 @@ $("#button").click(function (event) {
     addError("Phone Number should be of 10 Digit !!", "phoneerr");
     errorFound = true;
   } else {
-    errorFound = false;
     removeError("phoneerr");
   }
 
@@ -38,7 +36,6 @@ $("#button").click(function (event) {
     );
     errorFound = true;
   } else {
-    errorFound = false;
     removeError("passworderr");
   }
 
@@ -48,7 +45,6 @@ $("#button").click(function (event) {
     addError("Password Mismatch !!", "confirmpasserr");
     errorFound = true;
   } else {
-    errorFound = false;
     removeError("confirmpasserr");
   }
 
