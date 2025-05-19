@@ -18,13 +18,27 @@
         </div>
         <div>
           <label for="phone">Phone Number</label>
-          <input required type="number" name="phone" id="phone" />
+          <input
+            required
+            type="tel"
+            pattern="[0-9]{10}"
+            maxlength="10"
+            minlength="10"
+            name="phone"
+            id="phone"
+          />
           <span class="error" id="phoneerr"></span>
         </div>
         <div>
           <label for="password">Password</label>
           <span id="password-field">
-            <input required style="width: 100%;" type="password" name="password" id="password" />
+            <input
+              required
+              style="width: 100%"
+              type="password"
+              name="password"
+              id="password"
+            />
             <button id="show" type="button">show</button>
           </span>
           <span class="error" id="passworderr"></span>
@@ -36,7 +50,7 @@
         </div>
         <div>
           <input id="button" type="submit" />
-          <input type="reset" id="reset" hidden>
+          <input type="reset" id="reset" hidden />
         </div>
       </form>
     </div>

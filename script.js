@@ -12,6 +12,13 @@ $("#show").click(function (event) {
   }
 });
 
+$("#phone").keypress(function (event) {
+  var charCode = event.which;
+  if (charCode < 48 || charCode > 57) {
+    event.preventDefault();
+  }
+});
+
 $("#button").click(function (event) {
   event.preventDefault();
   errorFound = false;
